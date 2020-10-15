@@ -1,4 +1,10 @@
-The first step is process the file 'ODIR-5K_Training_Annotations(Updated)_V2.xlsx' provided by ODIR to obtain a csv file ('odir_classes.csv') with 1 eye and 1 class per row (in the cited original file each row contains both eyes information and multiple classes per eye). The file 'process_annotations.ipynb' does this task and provides a second (intermediate) csv file ('odir_table.csv') that contains 1 eye per row and all the clases of that eye. To know the classes of each eye, the .ipymb file matches keywords in each diagnosis of the 'Left-Diagnostic Keywords' and 'Right-Diagnostic Keywords' fields. These are:
+The first step is process the file 'ODIR-5K_Training_Annotations(Updated)_V2.xlsx' provided by ODIR to obtain a csv file 
+('odir_classes.csv') with 1 eye and 1 class per row (in the cited original file each row contains both eyes information 
+and multiple classes per eye). The file 'process_annotations.ipynb' does this task and provides a second (intermediate) 
+csv file ('odir_table.csv') that contains 1 eye per row and all the clases of that eye. To know the classes of each eye, 
+the .ipymb file matches keywords in each diagnosis of the 'Left-Diagnostic Keywords' and 'Right-Diagnostic Keywords' fields. 
+These are:
+
 'normal fundus' -> N
 'proliferative' -> D
 'glaucoma' -> G
@@ -7,3 +13,31 @@ The first step is process the file 'ODIR-5K_Training_Annotations(Updated)_V2.xls
 'hypertensive' -> H
 'myopia' -> M
 None of the previous match -> O
+
+
+Next, provided training images are organized in the next way:
+
+training
+	A
+		img_name1, img_name2, ... 
+	C
+		img_name1, img_name2, ... 
+	.
+	.
+	.
+	O
+		img_name1, img_name2, ... 
+validation
+	A
+		img_name1, img_name2, ... 
+	C
+		img_name1, img_name2, ... 
+	.
+	.
+	.
+	O
+		img_name1, img_name2, ... 
+
+This is because torchvision class ImageFolder takes this folders format to create a dataset.
+
+The images are organized like this through the file 'organize_data.ipynb'.
