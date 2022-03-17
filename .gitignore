@@ -1,0 +1,13 @@
+
+/data
+
+/models
+
+/other_odir_files
+
+/annotations/odir.csv
+/annotations/odir_table.csv
+
+/helpers/load_model_and_visualize.ipynb
+
+/.ipynb_checkpoints
