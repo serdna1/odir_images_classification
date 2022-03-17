@@ -34,7 +34,7 @@ donde cada uno de los directorios de clase contiene imágenes correspondientes a
 - M -> 'myopia'
 - O -> Ninguna de las anteriores
 
-El 25% de las fotografías proporcionadas han ido a validación y el otro 75% a entrenamiento de forma randomizada.
+El 25% de las fotografías proporcionadas (de la carpeta 'ODIR-5K_Training_Images/ODIR-5K_Training_Dataset') han ido a validación y el otro 75% a entrenamiento de forma randomizada.
 
 ## Entrenamiento
 Se ha refinado sobre una resnet50 preentrenada en imagenet.
